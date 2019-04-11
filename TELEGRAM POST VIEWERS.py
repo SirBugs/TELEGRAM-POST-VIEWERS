@@ -55,15 +55,6 @@ class BST(object):
         self.seen = 0
         self.AllSeens = 0
 
-    def print_logo(self):
-        clear = "\x1b[0m"
-        colors = [36, 32, 35, 39]
-
-        x = """
-    [#] @LS_Team       [#] @LS_Team                   
-           
-                
-    """
         for N, line in enumerate(x.split("\n")):
             sys.stdout.write("\x1b[1;%dm%s%s\n" % (random.choice(colors), line, clear))
             time.sleep(0.01)
@@ -146,7 +137,6 @@ class BST(object):
                   str(int(GetSeenCount) - int(GetSeenCount1)) + self.g + ' Seen!'
         except:
             self.cls()
-            self.print_logo()
             print self.r + '  ---------------------------------------------------------------------------------------'
             print self.y + '     [-]' + self.c + ' Conection Timed Out ! Or url is invaild'
             sys.exit()
